@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <script src="toevoegen.js" type="module"></script>
+    <title>Toevoegen</title>
+    <link rel="icon" href="javascript.ico">
+    <link rel="stylesheet" href="default.css">
+</head>
+
+<body>
+    <h1>Toevoegen ➕</h1>
+    <label>Naam:
+        <input id="naam" autofocus>
+    </label>
+    <label>Email:
+        <input id="email">
+    </label>
+    <button id="toevoegen">Toevoegen</button>
+    <div id="fout" hidden class="fout">Er is een fout gebeurd, contacteer de helpdesk.</div>
+    <div id="toegevoegd" hidden>Toegevoegd, het nummer is <span id="nummer"></span></div>
+</body>
+
+</html>
