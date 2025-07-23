@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  background-color: rgb(22, 182, 210);
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  font-size: 30px;
+}
+
+.score .totaal {
+  display: flex;
+}
+
+button {
+  background-color: rgb(218, 65, 208);
+  color: white;
+  height: 60px;
+  width: 250px;
+  margin: 20px 20px;
+  border-style: none;
+  border-radius: 17px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 3px solid black;
+}
+
+img {
+  height: 150px;
+}
+
+.images > img:first-child {
+  margin-right: 20px;
+}
