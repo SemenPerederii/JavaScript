@@ -15,12 +15,8 @@ body {
   font-size: 30px;
 }
 
-.score .totaal {
-  display: flex;
-}
-
 button {
-  background-color: rgb(218, 65, 208);
+  background-color: rgb(164, 33, 156);
   color: white;
   height: 60px;
   width: 250px;
@@ -41,4 +37,9 @@ img {
 
 .images > img:first-child {
   margin-right: 20px;
+}
+
+#score,
+#totaal {
+  color: rgb(1, 100, 1);
 }

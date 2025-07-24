@@ -6,9 +6,9 @@ const totaal = document.getElementById("totaal");
 const steen1 = document.getElementById("steen1");
 const steen2 = document.getElementById("steen2");
 
-btn.onclick = random;
-
 let totaalScore = 0;
+
+btn.onclick = random;
 
 function random() {
   let eersteSteen = Math.floor(Math.random() * 6 + 1);
@@ -18,7 +18,11 @@ function random() {
   steen2.src = "steen" + tweedeSteen + ".svg";
 
   let sum = eersteSteen + tweedeSteen;
-  score.textContent = sum;
+  if (eersteSteen === tweedeSteen) {
+    score.textContent = sum * 2;
+  } else {
+    score.textContent = sum;
+  }
 
   totaalScore += sum;
 
