@@ -11,3 +11,7 @@ btn.onclick = () => {
   }
   span.textContent = aantalSpaties;
 };
+
+input.oninput = (event) => {
+  btn.disabled = event.target.value === "";
+};
