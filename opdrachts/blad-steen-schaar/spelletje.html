@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blad Steen Schaar</title>
+    <script src="spelletje.js" type="module"></script>
+    <link rel="stylesheet" href="spelletje.css" />
+  </head>
+  <body>
+    <span id="game">Blaad Steen Schaar</span>
+    <div class="player-container">
+      <span id="keuze">Uw keuze</span>
+      <img class="images" src="1.svg" data-keuze="1" alt="blad" />
+      <img class="images" src="2.svg" data-keuze="2" alt="steen" />
+      <img class="images" src="3.svg" data-keuze="3" alt="schaar" />
+    </div>
+
+    <div class="winnar">
+      <span id="winnar-label">Winnar:</span>
+      <span id="winnar"></span>
+    </div>
+
+    <div class="computer-container">
+      <span>Computer keuze</span>
+      <div>
+        <img id="computer" src="123.svg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>

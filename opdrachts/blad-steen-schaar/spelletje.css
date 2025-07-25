@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Intel One Mono";
+  font-size: 30px;
+  background-color: rgb(255, 165, 253);
+}
+
+.player-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.computer-container {
+  width: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  height: 140px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.winnar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 80px;
+}
+
+#keuze {
+  margin-bottom: 40px;
+}
+
+.computer-container > span {
+  margin-bottom: 40px;
+}
+
+#winnar {
+  color: #3cff15;
+  text-align: center;
+  width: 200px;
+}
+
+.player-container img:hover {
+  animation: wiggle 0.4s infinite ease-in-out;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+  100% {
+    transform: rotate(-8deg);
+  }
+}
+
+.computer-container img {
+  animation: wiggle 0.4s infinite ease-in-out;
+  display: inline-block;
+}
+
+#game {
+  position: absolute;
+  top: 200px;
+  margin: 0 auto;
+  font-weight: 900;
+  text-transform: uppercase;
+}

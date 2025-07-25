@@ -1,22 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="nl">
-
-<head>
+  <head>
     <script src="drank.js" type="module"></script>
     <title>Drank</title>
-    <link rel="icon" href="javascript.ico">
-    <link rel="stylesheet" href="default.css">
-</head>
+    <link rel="icon" href="javascript.ico" />
+    <link rel="stylesheet" href="default.css" />
+    <script src="drank.js" type="module"></script>
+  </head>
 
-<body>
+  <body>
     <h1>Drank 🫗</h1>
     <ul>
-        <li><a href="#">water</a></li>
-        <li><a href="#">frisdrank</a></li>
-        <li><a href="#">bier</a></li>
-        <li><a href="#">wijn</a></li>
+      <li><a href="#" data-prijs="1">water</a></li>
+      <li><a href="#" data-prijs="1.5">frisdrank</a></li>
+      <li><a href="#" data-prijs="1.7">bier</a></li>
+      <li><a href="#" data-prijs="2">wijn</a></li>
     </ul>
-    <img id="foto" alt="foto van de drank" src="leeg.svg">
-</body>
-
+    <img id="foto" alt="foto van de drank" src="leeg.svg" />
+    <div id="prijsOnderdeel" hidden>
+      Prijs:
+      <span id="prijs"></span>
+    </div>
+  </body>
 </html>
