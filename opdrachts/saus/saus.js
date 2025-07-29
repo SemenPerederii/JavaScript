@@ -7,7 +7,33 @@ const img = document.getElementById("img");
 const reset = document.getElementById("btnrs");
 const letters = document.getElementById("letters");
 
-const sausen = ["cocktail", "mayonaise", "mosterd", "tartare", "vinaigrette"];
+const sausen = [
+  "секс",
+  "траx",
+  "перепих",
+  "жарить",
+  "заниматься",
+  "вставить",
+  "кончить",
+  "возбудить",
+  "поласкать",
+  "ощущения",
+  "позы",
+  "глубина",
+  "оргазм",
+  "приливы",
+  "эрогенные",
+  "груди",
+  "ягодицы",
+  "влажность",
+  "трение",
+  "насадка",
+  "смазка",
+  "стоны",
+  "фетиш",
+  "фантазия",
+  "интим",
+];
 const saus = sausen[Math.floor(Math.random() * sausen.length)];
 
 const main = [];
@@ -20,6 +46,7 @@ let fouten = 0;
 text.textContent = main.join("");
 
 btn.onclick = woordRaden;
+
 reset.onclick = () => {
   location.reload();
 };
@@ -51,7 +78,7 @@ function woordRaden() {
   text.textContent = main.join("");
 
   if (!main.includes(".")) {
-    text.textContent = `Je hebt gewonnen, de saus was ${saus}`;
+    text.textContent = `Ты угадал слово ${saus}`;
     text.style.color = "green";
     btn.hidden = true;
     reset.hidden = false;
@@ -59,11 +86,13 @@ function woordRaden() {
   }
 
   if (fouten >= 10) {
-    text.textContent = `Je hebt verloren, de saus was ${saus}`;
+    text.textContent = `Ты проиграл, слово было ${saus}`;
     text.style.color = "red";
     btn.hidden = true;
     reset.hidden = false;
   }
 
   letters.textContent += guess + " ";
+
+  input.focus();
 }

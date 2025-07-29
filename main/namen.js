@@ -12,4 +12,10 @@ document.getElementById("toevoegen").onclick = () => {
   voornaamInput.value = "";
   familienaamInput.value = "";
   voornaamInput.focus();
+
+  const verwijderLink = document.createElement("a");
+  verwijderLink.textContent = "X";
+  verwijderLink.href = "#";
+  verwijderLink.onclick = () => tr.remove();
+  tr.insertCell().append(verwijderLink);
 };
