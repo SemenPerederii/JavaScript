@@ -1,24 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="nl">
-
-<head>
+  <head>
     <script src="user.js" type="module"></script>
     <title>User</title>
-    <link rel="icon" href="javascript.ico">
-    <link rel="stylesheet" href="default.css">
-</head>
+    <link rel="icon" href="javascript.ico" />
+    <link rel="stylesheet" href="default.css" />
+    <script src="user.js" type="module"></script>
+  </head>
 
-<body>
+  <body>
     <h1>User 👤</h1>
+    <label>Nummer:</label>
+    <input id="zoekNummer" autofocus required type="number" min="1" />
+    <button id="zoeken">Zoeken</button>
+    <div id="nummerFout" hidden class="fout">Verkeerd nummer.</div>
     <dl id="user">
-        <dt>Nummer:</dt>
-        <dd id="nummer"></dd>
-        <dt>Naam:</dt>
-        <dd id="naam"></dd>
-        <dt>Email:</dt>
-        <dd id="email"></dd>
+      <dt>Nummer:</dt>
+      <dd id="nummer"></dd>
+      <dt>Naam:</dt>
+      <dd id="naam"></dd>
+      <dt>Email:</dt>
+      <dd id="email"></dd>
     </dl>
     <div id="nietGevonden" hidden class="fout">Niet gevonden.</div>
-</body>
-
+  </body>
 </html>

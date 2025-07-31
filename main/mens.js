@@ -17,4 +17,21 @@ document.getElementById("bewaar").onclick = () => {
   }
   const aantalFouten = document.querySelectorAll(".fout:not([hidden])").length;
   document.getElementById("bewaard").hidden = aantalFouten !== 0;
+
+  if (aantalFouten === 0) {
+    const mens = {
+      voornaam: document.getElementById("voornaam").value,
+      kinderen: Number(document.getElementById("kinderen").value),
+      geslacht: document.getElementById("geslacht").value,
+    };
+    const inJson = JSON.stringify(mens);
+  }
 };
+
+const mensInJson = localStorage.getItem("mens");
+if (mensInJson !== null) {
+  const mens = JSON.parse(mensInJson);
+  document.getElementById("voornaam").value = mens.voornaam;
+  document.getElementById("kinderen").value = mens.kinderen;
+  document.getElementById("geslacht").value = mens.geslacht;
+}
