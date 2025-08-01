@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoogspringen</title>
+    <script src="hoogspringen.js" type="module"></script>
+  </head>
+  <body>
+    <label for="name">Naam:</label>
+    <input id="name" type="text" required />
+    <label for="hoogte">Hoogte (in centimeters)</label>
+    <input id="hoogte" type="number" required min="1" />
+    <button id="btn">Toevoegen</button>
+    <span id="fout" hidden>Fout!</span>
+    <table>
+      <thead>
+        <tr>
+          <th>Naam</th>
+          <th>Hoogte</th>
+          <th>Winnaar</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </body>
+</html>

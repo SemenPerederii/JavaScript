@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geslachten</title>
+    <link rel="stylesheet" href="geslachten.css" />
+    <script src="geslachten.js" type="module"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="filter">
+        <a href="#" data-geslacht="mannen">Mannen</a>
+        <a href="#" data-geslacht="vrouwen">Vrouwen</a>
+        <a href="#" data-geslacht="x">X</a>
+        <a href="#" data-geslacht="alles">Alle</a>
+      </div>
+      <div class="list">
+        <table>
+          <thead>
+            <th>Voornaam</th>
+            <th>Familienaam</th>
+            <th>Geslacht</th>
+            <th>Foto</th>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+      <span id="fout" hidden>Error 404!</span>
+    </div>
+  </body>
+</html>
