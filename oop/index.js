@@ -1,70 +1,25 @@
 "use strict";
 
-class GoedDoel {
-  #adres;
-  #opbrengst;
+class Land {
   #naam;
-  #contactpersonen = [];
 
-  constructor(naam, adres) {
-    this.#opbrengst = 0;
+  static #aantal = 0;
+
+  constructor(naam) {
     this.#naam = naam;
-    this.#adres = adres;
+    Land.#aantal++;
   }
 
-  getAdres() {
-    return this.#adres;
-  }
-
-  voegContactpersonen(persoon) {
-    this.#contactpersonen.push(persoon);
-  }
-
-  getContactpersonen() {
-    return this.#contactpersonen;
-  }
-}
-
-class Adres {
-  #straat;
-  #huisnummer;
-  #postcode;
-  #woonplaats;
-
-  constructor(straat, huisnummer, postcode, woonplaats) {
-    this.#straat = straat;
-    this.#huisnummer = huisnummer;
-    this.#postcode = postcode;
-    this.#woonplaats = woonplaats;
-  }
-  getInfo() {
-    return `${this.#straat} ${this.#huisnummer} ${this.#postcode} ${
-      this.#woonplaats
-    }`;
-  }
-}
-
-const clinicClowns = new GoedDoel(
-  "Cliniclowns",
-  new Adres("Prins Bouwesd", "141", 7600, "Wilrijk")
-);
-
-class Persoon {
-  #voornaam;
-  #familienaam;
-
-  constructor(voornaam, familienaam) {
-    this.#voornaam = voornaam;
-    this.#familienaam = familienaam;
+  static getAantal() {
+    return Land.#aantal;
   }
 
   getNaam() {
-    return `${this.#voornaam} ${this.#familienaam}`;
+    return this.#naam;
   }
 }
 
-clinicClowns.voegContactpersonen(new Persoon("Arthur", "Janssens"));
-clinicClowns.voegContactpersonen(new Persoon("Emma", "Peeters"));
-for (const persoon of clinicClowns.getContactpersonen()) {
-  console.log(persoon.getNaam());
-}
+console.log(Land.getAantal());
+const land = new Land("Belgie");
+const buurland = new Land("Nederland");
+console.log(Land.getAantal());
